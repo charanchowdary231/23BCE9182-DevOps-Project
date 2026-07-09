@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Nexus Corp</title>
+  <meta name="description" content="Get in touch with Nexus Corp. Schedule a discovery call, ask about our services, or reach our global offices. We respond within 24 hours." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon">⚡</div>Nexus<span>Corp</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="careers.html">Careers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started →</a></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Get Started →</a>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="orb orb-1" style="width:400px;height:400px;top:-80px;right:5%;opacity:0.6;"></div>
+    <div class="page-hero-content container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+      <div class="badge">💬 &nbsp;Response within 24 hours</div>
+      <h1 class="page-hero-title">Let's <span class="text-gradient">Start a Conversation</span></h1>
+      <p class="page-hero-sub">Whether you have a project in mind or just want to learn more, our team is ready to help you take the next step.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT SECTION ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="grid-2" style="gap:60px;align-items:start;">
+
+        <!-- Form -->
+        <div class="reveal-left">
+          <div class="contact-form-wrapper">
+            <div style="margin-bottom:32px;">
+              <div class="section-tag">Send a Message</div>
+              <h2 class="section-title" style="font-size:1.7rem;">Tell Us About <span class="text-gradient">Your Project</span></h2>
+              <p style="font-size:0.88rem;color:var(--clr-text2);">Fill in the form and one of our senior consultants will reach out within one business day.</p>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name *</label>
+                  <input type="text" id="first-name" name="first_name" placeholder="James" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" name="last_name" placeholder="Harrington" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Work Email *</label>
+                  <input type="email" id="email" name="email" placeholder="james@company.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name *</label>
+                <input type="text" id="company" name="company" placeholder="Your Company Inc." required />
+              </div>
+              <div class="form-group">
+                <label for="service">Service of Interest</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service…</option>
+                  <option>AI & Machine Learning</option>
+                  <option>Cloud Architecture</option>
+                  <option>Cybersecurity</option>
+                  <option>Digital Transformation</option>
+                  <option>Strategic Consulting</option>
+                  <option>Product Development</option>
+                  <option>Multiple Services</option>
+                  <option>Other / Not Sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="budget">Estimated Budget</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select a budget range…</option>
+                  <option>Under $50K</option>
+                  <option>$50K – $150K</option>
+                  <option>$150K – $500K</option>
+                  <option>$500K – $1M</option>
+                  <option>$1M+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Project *</label>
+                <textarea id="message" name="message" placeholder="Describe your challenge, goals, or what you'd like to achieve. The more detail you share, the better we can prepare for our conversation." required></textarea>
+              </div>
+              <div id="form-success" class="form-success">
+                ✓ Your message has been sent! We'll be in touch within 24 hours.
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%;justify-content:center;padding:16px 32px;font-size:1rem;">
+                Send Message →
+              </button>
+              <p style="font-size:0.78rem;color:var(--clr-text3);text-align:center;margin-top:12px;">🔒 Your information is secure and will never be shared.</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="reveal-right">
+          <div class="section-tag">Contact Information</div>
+          <h2 class="section-title" style="font-size:1.7rem;">Multiple Ways to <span class="text-gradient">Reach Us</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:32px;font-size:0.95rem;">Our global team is available across all time zones. Reach us through whichever channel works best for you.</p>
+
+          <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px;">
+            <div class="contact-info-card">
+              <div class="contact-info-icon icon-box icon-blue">📧</div>
+              <div>
+                <div class="contact-info-title">Email Us</div>
+                <div class="contact-info-text"><a href="mailto:hello@nexuscorp.io" style="color:var(--clr-primary);">hello@nexuscorp.io</a><br/>General inquiries & partnerships</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon icon-box icon-teal">📞</div>
+              <div>
+                <div class="contact-info-title">Call Us</div>
+                <div class="contact-info-text"><a href="tel:+18005556789" style="color:var(--clr-accent);">+1 800 555 6789</a><br/>Mon–Fri, 9AM–6PM EST</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon icon-box icon-purple">💼</div>
+              <div>
+                <div class="contact-info-title">Sales & Partnerships</div>
+                <div class="contact-info-text"><a href="mailto:sales@nexuscorp.io" style="color:var(--clr-accent2);">sales@nexuscorp.io</a><br/>Enterprise deals & channel partners</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon icon-box icon-gold">🏢</div>
+              <div>
+                <div class="contact-info-title">Headquarters</div>
+                <div class="contact-info-text">350 Fifth Avenue, Suite 4900<br/>New York, NY 10118, USA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Global Offices -->
+          <div class="section-tag">Global Offices</div>
+          <div class="grid-2" style="gap:12px;margin-bottom:32px;">
+            <div class="card" style="padding:16px 20px;">
+              <div style="font-size:1.2rem;margin-bottom:4px;">🗽</div>
+              <div style="font-weight:700;font-size:0.9rem;">New York</div>
+              <div style="font-size:0.8rem;color:var(--clr-text2);">Headquarters</div>
+            </div>
+            <div class="card" style="padding:16px 20px;">
+              <div style="font-size:1.2rem;margin-bottom:4px;">🌉</div>
+              <div style="font-weight:700;font-size:0.9rem;">San Francisco</div>
+              <div style="font-size:0.8rem;color:var(--clr-text2);">West Coast Hub</div>
+            </div>
+            <div class="card" style="padding:16px 20px;">
+              <div style="font-size:1.2rem;margin-bottom:4px;">🇬🇧</div>
+              <div style="font-weight:700;font-size:0.9rem;">London</div>
+              <div style="font-size:0.8rem;color:var(--clr-text2);">EMEA HQ</div>
+            </div>
+            <div class="card" style="padding:16px 20px;">
+              <div style="font-size:1.2rem;margin-bottom:4px;">🇸🇬</div>
+              <div style="font-weight:700;font-size:0.9rem;">Singapore</div>
+              <div style="font-size:0.8rem;color:var(--clr-text2);">APAC HQ</div>
+            </div>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="map-placeholder">
+            🗺️
+            <span>Interactive Map — 350 Fifth Ave, New York</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── TRUST SIGNALS ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <div class="section-tag">Why Work With Us</div>
+        <h2 class="section-title">You're in <span class="text-gradient">Safe Hands</span></h2>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal reveal-delay-1" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">⏱️</div>
+          <div style="font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:6px;">24hr Response</div>
+          <div style="font-size:0.85rem;color:var(--clr-text2);">We respond to every inquiry within one business day.</div>
+        </div>
+        <div class="card reveal reveal-delay-2" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🔒</div>
+          <div style="font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:6px;">NDA Ready</div>
+          <div style="font-size:0.85rem;color:var(--clr-text2);">We sign NDAs before any discovery discussion, protecting your IP.</div>
+        </div>
+        <div class="card reveal reveal-delay-3" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🆓</div>
+          <div style="font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:6px;">Free Consultation</div>
+          <div style="font-size:0.85rem;color:var(--clr-text2);">First discovery session is always free with no commitment.</div>
+        </div>
+        <div class="card reveal reveal-delay-4" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🌍</div>
+          <div style="font-family:'Outfit',sans-serif;font-weight:700;margin-bottom:6px;">Global Coverage</div>
+          <div style="font-size:0.85rem;color:var(--clr-text2);">Teams available across all major time zones, 24/7.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">⚡</div>Nexus<span style="color:var(--clr-primary);">Corp</span></div><p class="footer-brand-desc">Empowering enterprises to innovate, scale, and lead in the digital era.</p><div class="footer-socials"><a href="#" class="footer-social">in</a><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">⌨</a><a href="#" class="footer-social">▶</a></div></div>
+        <div class="footer-col"><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="services.html">AI & Machine Learning</a></li><li><a href="services.html">Cloud Architecture</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Digital Transformation</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:hello@nexuscorp.io">hello@nexuscorp.io</a></li><li><a href="tel:+18005556789">+1 800 555 6789</a></li><li><a href="#">350 Fifth Ave, New York</a></li></ul></div>
+      </div>
+    </div>
+    <div class="container"><div class="footer-bottom"><p>© 2024 Nexus Corp. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div></div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

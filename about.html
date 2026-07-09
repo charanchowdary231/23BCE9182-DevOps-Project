@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Nexus Corp</title>
+  <meta name="description" content="Learn about Nexus Corp's story, mission, values, leadership team, and 18+ years of transforming enterprises worldwide." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .faq-item { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; transition: var(--transition); }
+    .faq-item:hover { border-color: var(--clr-border2); }
+    .faq-item.open { border-color: var(--clr-border2); }
+    .faq-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+    .faq-header::after { content: '+'; font-size: 1.3rem; color: var(--clr-primary); transition: transform 0.3s ease; }
+    .faq-item.open .faq-header::after { transform: rotate(45deg); }
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-body-inner { padding: 0 24px 20px; font-size: 0.9rem; color: var(--clr-text2); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">⚡</div>
+        Nexus<span>Corp</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Get Started →</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="careers.html">Careers</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Get Started →</a>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="orb orb-1" style="width:400px;height:400px;top:-80px;right:5%;opacity:0.6;"></div>
+    <div class="page-hero-content container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>About</span></div>
+      <div class="badge">🌍 &nbsp;18+ Years of Excellence</div>
+      <h1 class="page-hero-title">We Are <span class="text-gradient">Nexus Corp</span></h1>
+      <p class="page-hero-sub">A global technology and consulting firm committed to transforming enterprises through innovation, intelligence, and integrity.</p>
+    </div>
+  </section>
+
+  <!-- ── MISSION ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="grid-2" style="gap:80px;align-items:start;">
+        <div class="reveal-left">
+          <img src="images/about_team.png" alt="Nexus Corp team collaborating" style="border-radius:var(--radius-lg);width:100%;object-fit:cover;" />
+        </div>
+        <div class="reveal-right">
+          <div class="section-tag">Our Mission</div>
+          <h2 class="section-title">Driving <span class="text-gradient">Exponential Growth</span> for Global Enterprises</h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:24px;font-size:0.95rem;">
+            Founded in 2006, Nexus Corp has grown from a boutique consulting firm to a global technology powerhouse with over 2,400 professionals serving clients in 42 countries.
+          </p>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:36px;font-size:0.95rem;">
+            We believe technology is the greatest equalizer of our time — and our mission is to ensure every enterprise we partner with has access to the tools, strategies, and talent needed to lead in their industry.
+          </p>
+          <div class="highlight-box" style="margin-bottom:32px;">
+            <p style="font-size:1.1rem;font-weight:700;font-family:'Outfit',sans-serif;margin-bottom:8px;">"We don't just build solutions. We build the future."</p>
+            <p style="font-size:0.82rem;color:var(--clr-text2);">— James Harrington, Founder & CEO</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Partner With Us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── STATS ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="stats-bar reveal">
+        <div class="stat-item">
+          <div class="stat-number" data-target="2400" data-suffix="+">2400+</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12">12</div>
+          <div class="stat-label">Global Offices</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="1200" data-suffix="+">1200+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="18" data-suffix="yrs">18yrs</div>
+          <div class="stat-label">Industry Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── VALUES ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <div class="section-tag">Our Core Values</div>
+        <h2 class="section-title">Principles That <span class="text-gradient">Define Us</span></h2>
+        <p class="section-subtitle center">Everything we do is anchored in a set of values that guide our decisions, culture, and relationships.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal reveal-delay-1" style="text-align:center;">
+          <div class="icon-box icon-blue" style="margin:0 auto 20px;">💡</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Innovation First</div>
+          <p style="font-size:0.87rem;color:var(--clr-text2);line-height:1.6;">We challenge convention, embrace change, and relentlessly pursue breakthrough ideas.</p>
+        </div>
+        <div class="card reveal reveal-delay-2" style="text-align:center;">
+          <div class="icon-box icon-teal" style="margin:0 auto 20px;">🤝</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Client Obsession</div>
+          <p style="font-size:0.87rem;color:var(--clr-text2);line-height:1.6;">Our clients' success is the only metric that truly matters. We go beyond expectations, always.</p>
+        </div>
+        <div class="card reveal reveal-delay-3" style="text-align:center;">
+          <div class="icon-box icon-purple" style="margin:0 auto 20px;">🏛️</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Integrity Always</div>
+          <p style="font-size:0.87rem;color:var(--clr-text2);line-height:1.6;">We operate with radical transparency, honest communication, and unwavering ethical standards.</p>
+        </div>
+        <div class="card reveal reveal-delay-4" style="text-align:center;">
+          <div class="icon-box icon-gold" style="margin:0 auto 20px;">🌱</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:8px;">Growth Mindset</div>
+          <p style="font-size:0.87rem;color:var(--clr-text2);line-height:1.6;">We invest in our people, our communities, and our planet — because sustainable success requires it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── OUR STORY / TIMELINE ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="grid-2" style="gap:80px;">
+        <div class="reveal-left">
+          <div class="section-tag">Our Journey</div>
+          <h2 class="section-title">From <span class="text-gradient">Startup to Global Leader</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:36px;font-size:0.95rem;">18 years of bold decisions, relentless innovation, and an unwavering belief that technology changes everything.</p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2006</div>
+              <div class="timeline-title">Founded in New York</div>
+              <div class="timeline-desc">James Harrington founded Nexus Corp with 8 employees and a vision to democratize enterprise technology.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2010</div>
+              <div class="timeline-title">Global Expansion</div>
+              <div class="timeline-desc">Opened offices in London and Singapore. Surpassed 100 enterprise clients milestone.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2015</div>
+              <div class="timeline-title">AI & Cloud Practice Launched</div>
+              <div class="timeline-desc">Pioneered enterprise AI adoption with proprietary frameworks. Grew team to 800+ professionals.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2019</div>
+              <div class="timeline-title">Industry Recognition</div>
+              <div class="timeline-desc">Named to Gartner Magic Quadrant. Achieved $500M revenue milestone and 2,000+ team members.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2024</div>
+              <div class="timeline-title">Nexus AI Platform Launch</div>
+              <div class="timeline-desc">Released our flagship AI platform serving 500+ enterprises globally. Recognized as a Fortune Best Workplace.</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="section-tag">Our Skills</div>
+          <h2 class="section-title">Deep <span class="text-gradient">Expertise</span> Across Domains</h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:36px;font-size:0.95rem;">Our cross-functional teams combine technical depth with business acumen to deliver outcomes at every layer.</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Artificial Intelligence</span><span>96%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="width:96%;"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Cloud Architecture</span><span>94%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="width:94%;"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Digital Transformation</span><span>98%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="width:98%;"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Cybersecurity</span><span>91%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="width:91%;"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-label"><span>Strategic Consulting</span><span>97%</span></div>
+            <div class="skill-track"><div class="skill-fill" style="width:97%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── TEAM ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <div class="section-tag">Leadership Team</div>
+        <h2 class="section-title">The Minds <span class="text-gradient">Behind Nexus</span></h2>
+        <p class="section-subtitle center">World-class leaders with decades of combined experience across technology, strategy, and global business.</p>
+      </div>
+      <div class="grid-4">
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-card-img">👨‍💼</div>
+          <div class="team-card-body">
+            <div class="team-card-name">James Harrington</div>
+            <div class="team-card-role">Founder & CEO</div>
+            <div class="team-card-bio">18 years leading enterprise transformations across Fortune 500 companies globally.</div>
+            <div class="team-socials">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-card-img">👩‍💻</div>
+          <div class="team-card-body">
+            <div class="team-card-name">Dr. Priya Sharma</div>
+            <div class="team-card-role">Chief Technology Officer</div>
+            <div class="team-card-bio">Former Google Brain researcher, AI visionary with 12 patents in machine learning.</div>
+            <div class="team-socials">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-card-img">👨‍🎨</div>
+          <div class="team-card-body">
+            <div class="team-card-name">Carlos Mendez</div>
+            <div class="team-card-role">Chief Strategy Officer</div>
+            <div class="team-card-bio">Ex-McKinsey partner with expertise in digital disruption and growth strategy.</div>
+            <div class="team-socials">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal reveal-delay-4">
+          <div class="team-card-img">👩‍🔬</div>
+          <div class="team-card-body">
+            <div class="team-card-name">Amara Okonkwo</div>
+            <div class="team-card-role">Chief People Officer</div>
+            <div class="team-card-bio">Culture architect who built Nexus from 80 to 2,400+ world-class professionals.</div>
+            <div class="team-socials">
+              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:48px;">
+        <a href="careers.html" class="btn btn-outline">Join Our Team →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Let's Build the <span class="text-gradient">Future Together</span></h2>
+      <p class="cta-sub">Whether you're modernizing legacy systems or launching AI-first products, Nexus Corp is your trusted partner.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Start a Conversation →</a>
+        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><div class="logo-icon">⚡</div>Nexus<span style="color:var(--clr-primary);">Corp</span></div>
+          <p class="footer-brand-desc">Empowering enterprises to innovate, scale, and lead in the digital era through technology and strategic excellence.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social">in</a><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">⌨</a><a href="#" class="footer-social">▶</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links"><li><a href="services.html">AI & Machine Learning</a></li><li><a href="services.html">Cloud Architecture</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Digital Transformation</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links"><li><a href="mailto:hello@nexuscorp.io">hello@nexuscorp.io</a></li><li><a href="tel:+18005556789">+1 800 555 6789</a></li><li><a href="#">350 Fifth Ave, New York</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2024 Nexus Corp. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

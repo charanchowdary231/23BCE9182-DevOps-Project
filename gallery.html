@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Nexus Corp</title>
+  <meta name="description" content="Explore Nexus Corp's gallery showcasing our offices, team culture, client events, awards, and the world-class workplaces we call home." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(4, 13, 26, 0.95);
+      display: none; align-items: center; justify-content: center;
+      backdrop-filter: blur(12px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-content {
+      max-width: 90vw; max-height: 90vh;
+      position: relative;
+    }
+    .lightbox-img {
+      max-width: 90vw; max-height: 80vh;
+      border-radius: var(--radius-md);
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox-close {
+      position: absolute; top: -48px; right: 0;
+      width: 40px; height: 40px;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      color: var(--clr-text); font-size: 1.2rem;
+      cursor: pointer; transition: var(--transition);
+    }
+    .lightbox-close:hover { background: rgba(255,0,0,0.2); border-color: rgba(255,0,0,0.4); }
+    .lightbox-caption {
+      text-align: center; margin-top: 16px;
+      font-weight: 600; font-size: 0.95rem;
+      color: var(--clr-text2);
+    }
+
+    /* Gallery grid overrides */
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Award badges */
+    .award-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .award-card:hover { border-color: var(--clr-border2); transform: translateY(-4px); }
+    .award-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .award-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .award-org { font-size: 0.8rem; color: var(--clr-text2); }
+    .award-year { display: inline-block; margin-top: 8px; padding: 2px 10px; background: rgba(59,158,255,0.1); border: 1px solid rgba(59,158,255,0.2); border-radius: 99px; font-size: 0.75rem; font-weight: 700; color: var(--clr-primary); }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon">⚡</div>Nexus<span>Corp</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="careers.html">Careers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started →</a></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Get Started →</a>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="orb orb-1" style="width:400px;height:400px;top:-80px;right:5%;opacity:0.6;"></div>
+    <div class="page-hero-content container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gallery</span></div>
+      <div class="badge">📸 &nbsp;Life at Nexus Corp</div>
+      <h1 class="page-hero-title">Our World, <span class="text-gradient">In Pictures</span></h1>
+      <p class="page-hero-sub">Take a look inside Nexus Corp — our offices, culture, events, and the incredible people who make it all possible.</p>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="office">Offices</button>
+        <button class="filter-btn" data-filter="team">Team & Culture</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="awards">Awards</button>
+      </div>
+
+      <div class="gallery-grid reveal">
+
+        <!-- Item 1 — use real image -->
+        <div class="gallery-item wide" data-category="office" style="cursor:pointer;" onclick="openLightbox(this)">
+          <img src="images/about_team.png" alt="Nexus Corp New York HQ" />
+          <div class="gallery-overlay"><div class="gallery-caption">New York Headquarters — Open Floor Plan</div></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item" data-category="team" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">👥<span>All-Hands 2024</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Annual All-Hands — Miami 2024</div></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item" data-category="office" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🏢<span>London Office</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">London EMEA Headquarters</div></div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item" data-category="events" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🎤<span>NexusCon 2024</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">NexusCon Annual Conference</div></div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item" data-category="team" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🏃<span>Hackathon 2024</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">48-Hour AI Hackathon — NYC</div></div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item" data-category="awards" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🏆<span>Gartner Award</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Gartner Magic Quadrant Celebration</div></div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item" data-category="office" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🌏<span>Singapore HQ</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Singapore APAC Headquarters</div></div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item" data-category="team" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🌴<span>Team Retreat 2024</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Annual Team Retreat — Bali 2024</div></div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item" data-category="events" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🤝<span>Client Summit</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Global Client Success Summit</div></div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="gallery-item" data-category="awards" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">⭐<span>Fortune 100 Best</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Fortune 100 Best Companies Award</div></div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="gallery-item" data-category="office" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">☕<span>SF Office</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">San Francisco Innovation Lab</div></div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="gallery-item" data-category="team" style="cursor:pointer;" onclick="openLightbox(this)">
+          <div class="gallery-placeholder">🎉<span>10yr Anniversary</span></div>
+          <div class="gallery-overlay"><div class="gallery-caption">Nexus Corp 10-Year Anniversary</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox(null)">✕</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Gallery item" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── AWARDS ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:56px;">
+        <div class="section-tag">Recognition</div>
+        <h2 class="section-title">Awards & <span class="text-gradient">Accolades</span></h2>
+        <p class="section-subtitle center">Industry recognition that reflects our commitment to excellence, innovation, and people.</p>
+      </div>
+      <div class="grid-4">
+        <div class="award-card reveal reveal-delay-1">
+          <div class="award-icon">🥇</div>
+          <div class="award-title">Leader, Magic Quadrant</div>
+          <div class="award-org">Gartner</div>
+          <div class="award-year">2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-2">
+          <div class="award-icon">⭐</div>
+          <div class="award-title">100 Best Companies to Work For</div>
+          <div class="award-org">Fortune Magazine</div>
+          <div class="award-year">2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-3">
+          <div class="award-icon">🚀</div>
+          <div class="award-title">Top AI Innovator</div>
+          <div class="award-org">Fast Company</div>
+          <div class="award-year">2023 & 2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-4">
+          <div class="award-icon">💎</div>
+          <div class="award-title">Elite Consulting Firm</div>
+          <div class="award-org">Forbes Global 2000</div>
+          <div class="award-year">2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-1">
+          <div class="award-icon">🛡️</div>
+          <div class="award-title">Cybersecurity Firm of the Year</div>
+          <div class="award-org">SC Media Awards</div>
+          <div class="award-year">2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-2">
+          <div class="award-icon">🌱</div>
+          <div class="award-title">Best ESG Program</div>
+          <div class="award-org">Tech Impact Awards</div>
+          <div class="award-year">2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-3">
+          <div class="award-icon">👩‍💻</div>
+          <div class="award-title">Best Workplace for Women</div>
+          <div class="award-org">Women in Tech Global</div>
+          <div class="award-year">2023 & 2024</div>
+        </div>
+        <div class="award-card reveal reveal-delay-4">
+          <div class="award-icon">🎖️</div>
+          <div class="award-title">Partner of the Year</div>
+          <div class="award-org">Microsoft Azure Awards</div>
+          <div class="award-year">2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Want to Be <span class="text-gradient">Part of This?</span></h2>
+      <p class="cta-sub">Join our world-class team or partner with us to transform your enterprise. Either way, greatness awaits.</p>
+      <div class="cta-actions">
+        <a href="careers.html" class="btn btn-primary">View Open Roles →</a>
+        <a href="contact.html" class="btn btn-outline">Work With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">⚡</div>Nexus<span style="color:var(--clr-primary);">Corp</span></div><p class="footer-brand-desc">Empowering enterprises to innovate, scale, and lead in the digital era.</p><div class="footer-socials"><a href="#" class="footer-social">in</a><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">⌨</a><a href="#" class="footer-social">▶</a></div></div>
+        <div class="footer-col"><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="services.html">AI & Machine Learning</a></li><li><a href="services.html">Cloud Architecture</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Digital Transformation</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:hello@nexuscorp.io">hello@nexuscorp.io</a></li><li><a href="tel:+18005556789">+1 800 555 6789</a></li><li><a href="#">350 Fifth Ave, New York</a></li></ul></div>
+      </div>
+    </div>
+    <div class="container"><div class="footer-bottom"><p>© 2024 Nexus Corp. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div></div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+  <script>
+    // Gallery lightbox
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      const caption = el.querySelector('.gallery-caption')?.textContent || '';
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCaption = document.getElementById('lightbox-caption');
+
+      if (img) {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbImg.style.display = 'block';
+      } else {
+        // Placeholder — show large emoji
+        lbImg.src = '';
+        lbImg.style.display = 'none';
+      }
+      lbCaption.textContent = caption;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (!e || e.target === document.getElementById('lightbox')) {
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox(null);
+    });
+  </script>
+</body>
+</html>

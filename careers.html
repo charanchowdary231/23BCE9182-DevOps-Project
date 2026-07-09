@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers — Nexus Corp</title>
+  <meta name="description" content="Join Nexus Corp — one of the world's best technology workplaces. Explore open roles, benefits, and what makes us a world-class place to grow your career." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .benefit-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 28px 24px; transition: var(--transition); }
+    .benefit-card:hover { border-color: var(--clr-border2); transform: translateY(-4px); }
+    .benefit-icon { font-size: 2rem; margin-bottom: 12px; }
+    .benefit-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+    .benefit-desc { font-size: 0.85rem; color: var(--clr-text2); line-height: 1.6; }
+
+    .faq-item { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; transition: var(--transition); }
+    .faq-item:hover { border-color: var(--clr-border2); }
+    .faq-item.open { border-color: var(--clr-border2); }
+    .faq-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+    .faq-header::after { content: '+'; font-size: 1.3rem; color: var(--clr-primary); transition: transform 0.3s ease; }
+    .faq-item.open .faq-header::after { transform: rotate(45deg); }
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-body-inner { padding: 0 24px 20px; font-size: 0.9rem; color: var(--clr-text2); line-height: 1.7; }
+
+    .dept-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+    .dept-btn { padding: 8px 20px; border-radius: 99px; font-size: 0.85rem; font-weight: 600; color: var(--clr-text2); background: var(--clr-surface); border: 1px solid var(--clr-border); cursor: pointer; transition: var(--transition); }
+    .dept-btn.active, .dept-btn:hover { background: rgba(59,158,255,0.12); border-color: var(--clr-border2); color: var(--clr-primary); }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon">⚡</div>Nexus<span>Corp</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="careers.html">Careers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started →</a></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Get Started →</a>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="orb orb-1" style="width:400px;height:400px;top:-80px;right:5%;opacity:0.6;"></div>
+    <div class="page-hero-content container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Careers</span></div>
+      <div class="badge">🏆 &nbsp;Fortune Best Workplace 2024</div>
+      <h1 class="page-hero-title">Build the <span class="text-gradient">Future With Us</span></h1>
+      <p class="page-hero-sub">Join 2,400+ world-class technologists, strategists, and innovators reshaping what's possible for enterprise business.</p>
+    </div>
+  </section>
+
+  <!-- ── WHY NEXUS ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <div class="section-tag">Why Nexus Corp</div>
+        <h2 class="section-title">A Place Where <span class="text-gradient">Careers Accelerate</span></h2>
+        <p class="section-subtitle center">We invest deeply in our people because we know that exceptional talent is our greatest competitive advantage.</p>
+      </div>
+      <div class="grid-4">
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">💰</div>
+          <div class="benefit-title">Top-of-Market Pay</div>
+          <div class="benefit-desc">Competitive salaries in the top 10% of the industry, with equity and performance bonuses.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">🌍</div>
+          <div class="benefit-title">Remote-First Culture</div>
+          <div class="benefit-desc">Work from anywhere. We have 12 offices globally but you're never required to be in one.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon">🎓</div>
+          <div class="benefit-title">$5K Learning Budget</div>
+          <div class="benefit-desc">Annual learning & development allowance for courses, conferences, certifications, and books.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-4">
+          <div class="benefit-icon">🏥</div>
+          <div class="benefit-title">Full Health Coverage</div>
+          <div class="benefit-desc">Premium medical, dental, and vision insurance for you and your family, 100% covered.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">🏖️</div>
+          <div class="benefit-title">Unlimited PTO</div>
+          <div class="benefit-desc">We trust you to take the time you need to recharge, explore, and bring your best self.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">👶</div>
+          <div class="benefit-title">Parental Leave</div>
+          <div class="benefit-desc">20 weeks fully paid parental leave for all new parents, regardless of gender.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon">📈</div>
+          <div class="benefit-title">Career Growth</div>
+          <div class="benefit-desc">Clear, transparent promotion tracks with dedicated mentors and bi-annual reviews.</div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-4">
+          <div class="benefit-icon">🍕</div>
+          <div class="benefit-title">Team Events</div>
+          <div class="benefit-desc">Quarterly team retreats, hackathons, and an annual all-hands in a new city each year.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── STATS ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="stats-bar reveal">
+        <div class="stat-item"><div class="stat-number" data-target="2400" data-suffix="+">2400+</div><div class="stat-label">Team Members</div></div>
+        <div class="stat-item"><div class="stat-number" data-target="42">42</div><div class="stat-label">Countries Represented</div></div>
+        <div class="stat-item"><div class="stat-number" data-target="4.8" data-suffix="/5">4.8/5</div><div class="stat-label">Glassdoor Rating</div></div>
+        <div class="stat-item"><div class="stat-number" data-target="94" data-suffix="%">94%</div><div class="stat-label">Employee Satisfaction</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── OPEN ROLES ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:48px;">
+        <div class="section-tag">Open Positions</div>
+        <h2 class="section-title">Find Your <span class="text-gradient">Next Opportunity</span></h2>
+        <p class="section-subtitle center">We're hiring across all departments. Find the role that fits your passion and expertise.</p>
+      </div>
+
+      <div class="dept-filter reveal">
+        <button class="dept-btn active">All Departments</button>
+        <button class="dept-btn">Engineering</button>
+        <button class="dept-btn">AI & Data</button>
+        <button class="dept-btn">Consulting</button>
+        <button class="dept-btn">Design</button>
+        <button class="dept-btn">Operations</button>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Senior AI/ML Engineer</div>
+            <div class="job-meta">
+              <span class="job-tag tag-blue">AI & Data</span>
+              <span class="job-tag tag-teal">Remote</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$160K – $210K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Cloud Solutions Architect</div>
+            <div class="job-meta">
+              <span class="job-tag tag-blue">Engineering</span>
+              <span class="job-tag tag-teal">Hybrid · New York</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$150K – $195K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Senior Strategy Consultant</div>
+            <div class="job-meta">
+              <span class="job-tag tag-purple">Consulting</span>
+              <span class="job-tag tag-teal">Remote</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$140K – $185K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Lead Product Designer (UX/UI)</div>
+            <div class="job-meta">
+              <span class="job-tag tag-gold">Design</span>
+              <span class="job-tag tag-teal">Remote</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$130K – $170K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Cybersecurity Engineer (Red Team)</div>
+            <div class="job-meta">
+              <span class="job-tag tag-blue">Engineering</span>
+              <span class="job-tag tag-teal">Remote</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$155K – $200K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Data Scientist — NLP Specialist</div>
+            <div class="job-meta">
+              <span class="job-tag tag-blue">AI & Data</span>
+              <span class="job-tag tag-teal">Hybrid · London</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$145K – $190K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Engineering Manager — Platform</div>
+            <div class="job-meta">
+              <span class="job-tag tag-blue">Engineering</span>
+              <span class="job-tag tag-teal">Remote</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$175K – $225K</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+        <div class="job-card reveal">
+          <div class="job-card-left">
+            <div class="job-title">Business Development Executive</div>
+            <div class="job-meta">
+              <span class="job-tag tag-gold">Operations</span>
+              <span class="job-tag tag-teal">Hybrid · NYC / Singapore</span>
+              <span class="job-tag tag-purple">Full-Time</span>
+              <span style="font-size:0.82rem;color:var(--clr-text3);">$120K + Commission</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost" style="flex-shrink:0;">Apply Now →</a>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <p style="color:var(--clr-text2);font-size:0.9rem;margin-bottom:16px;">Don't see the right role? We're always looking for exceptional talent.</p>
+        <a href="contact.html" class="btn btn-outline">Send Us Your Resume →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── FAQ ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="grid-2" style="gap:80px;align-items:start;">
+        <div class="reveal-left">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Your <span class="text-gradient">Questions Answered</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:24px;font-size:0.95rem;">Everything you need to know about working at Nexus Corp and the hiring process.</p>
+          <div class="highlight-box">
+            <p style="font-weight:700;margin-bottom:8px;">Still have questions?</p>
+            <p style="font-size:0.88rem;color:var(--clr-text2);margin-bottom:14px;">Our talent team is happy to answer anything.</p>
+            <a href="mailto:careers@nexuscorp.io" class="btn btn-ghost" style="font-size:0.85rem;">careers@nexuscorp.io</a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="faq-item">
+            <div class="faq-header">What does the hiring process look like?</div>
+            <div class="faq-body"><div class="faq-body-inner">Our process typically involves 4 stages: a 30-min recruiter screen, a technical/skills assessment, two panel interviews with your future team, and a final values conversation with a senior leader. The whole process takes 2–3 weeks.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-header">Are all roles truly remote?</div>
+            <div class="faq-body"><div class="faq-body-inner">The majority of our roles are fully remote. Some client-facing and leadership roles require occasional travel (6–8 trips per year) or prefer candidates near a major office. Each job listing specifies its location requirements.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-header">Do you sponsor work visas?</div>
+            <div class="faq-body"><div class="faq-body-inner">Yes, we sponsor H-1B, TN, and other work visas for qualified candidates in the United States, as well as work permits in the UK, Canada, Singapore, and Germany.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-header">What equity do employees receive?</div>
+            <div class="faq-body"><div class="faq-body-inner">All full-time employees receive RSU grants as part of their compensation package. The size of the grant varies by level. Vesting is 4 years with a 1-year cliff, and we offer early exercise options.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-header">How does performance management work?</div>
+            <div class="faq-body"><div class="faq-body-inner">We do bi-annual performance reviews with 360-degree feedback. Each employee has an Individual Growth Plan (IGP) co-created with their manager. Promotions happen on a rolling basis, not just annually.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Ready to <span class="text-gradient">Join Our Team?</span></h2>
+      <p class="cta-sub">Explore open roles and take the first step toward a career that challenges, rewards, and inspires you.</p>
+      <div class="cta-actions">
+        <a href="#open-roles" class="btn btn-primary">Browse Open Roles →</a>
+        <a href="contact.html" class="btn btn-outline">Contact HR Team</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">⚡</div>Nexus<span style="color:var(--clr-primary);">Corp</span></div><p class="footer-brand-desc">Empowering enterprises to innovate, scale, and lead in the digital era.</p><div class="footer-socials"><a href="#" class="footer-social">in</a><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">⌨</a><a href="#" class="footer-social">▶</a></div></div>
+        <div class="footer-col"><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="services.html">AI & Machine Learning</a></li><li><a href="services.html">Cloud Architecture</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Digital Transformation</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:hello@nexuscorp.io">hello@nexuscorp.io</a></li><li><a href="tel:+18005556789">+1 800 555 6789</a></li><li><a href="#">350 Fifth Ave, New York</a></li></ul></div>
+      </div>
+    </div>
+    <div class="container"><div class="footer-bottom"><p>© 2024 Nexus Corp. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div></div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

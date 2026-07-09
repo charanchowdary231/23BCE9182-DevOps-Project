@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Nexus Corp</title>
+  <meta name="description" content="Explore Nexus Corp's full suite of enterprise technology services: AI, cloud, cybersecurity, digital transformation, and strategic consulting." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .pricing-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 36px 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+    .pricing-card:hover { border-color: var(--clr-border2); transform: translateY(-8px); box-shadow: var(--shadow-card); }
+    .pricing-card.featured {
+      background: linear-gradient(135deg, rgba(59,158,255,0.08), rgba(0,229,200,0.04));
+      border-color: var(--clr-border2);
+    }
+    .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--gradient-blue); color: #fff; padding: 4px 18px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+    .pricing-tier { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clr-primary); margin-bottom: 12px; }
+    .pricing-price { font-family: 'Outfit', sans-serif; font-size: 2.8rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .pricing-period { font-size: 0.82rem; color: var(--clr-text3); margin-bottom: 24px; }
+    .pricing-features { text-align: left; margin-bottom: 28px; }
+    .pricing-feature { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--clr-text2); padding: 8px 0; border-bottom: 1px solid var(--clr-border); }
+    .pricing-feature:last-child { border-bottom: none; }
+    .pricing-feature::before { content: '✓'; color: var(--clr-accent); font-weight: 700; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon">⚡</div>Nexus<span>Corp</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get Started →</a></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Get Started →</a>
+  </nav>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-grid"></div>
+    <div class="orb orb-1" style="width:400px;height:400px;top:-80px;right:5%;opacity:0.6;"></div>
+    <div class="page-hero-content container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+      <div class="badge">🛠️ &nbsp;Comprehensive Enterprise Solutions</div>
+      <h1 class="page-hero-title">Services That <span class="text-gradient">Move Markets</span></h1>
+      <p class="page-hero-sub">End-to-end technology and consulting capabilities designed to deliver measurable business outcomes at enterprise scale.</p>
+    </div>
+  </section>
+
+  <!-- ── MAIN SERVICES ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:64px;">
+        <div class="section-tag">Our Capabilities</div>
+        <h2 class="section-title">Everything You Need to <span class="text-gradient">Dominate Your Market</span></h2>
+        <p class="section-subtitle center">Six core practice areas, each staffed with specialists and backed by proprietary frameworks built over 18 years.</p>
+      </div>
+
+      <!-- Service 1 -->
+      <div class="grid-2" style="gap:60px;margin-bottom:80px;align-items:center;">
+        <div class="reveal-left">
+          <div class="badge">Practice Area 01</div>
+          <h2 class="section-title"><span class="text-gradient">AI & Machine Learning</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:24px;">We help enterprises harness the full power of artificial intelligence — from custom model development to production deployment and MLOps at scale.</p>
+          <div class="service-features" style="margin-bottom:28px;">
+            <div class="service-feature">Custom LLM fine-tuning and deployment</div>
+            <div class="service-feature">Computer vision and NLP systems</div>
+            <div class="service-feature">Predictive analytics and forecasting</div>
+            <div class="service-feature">AI governance and responsible AI</div>
+            <div class="service-feature">Recommendation engines and personalization</div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost">Explore AI Services →</a>
+        </div>
+        <div class="reveal-right">
+          <div class="card" style="padding:40px;text-align:center;">
+            <div style="font-size:4rem;margin-bottom:20px;">🤖</div>
+            <div class="grid-2" style="gap:16px;margin-top:20px;">
+              <div class="highlight-box" style="text-align:center;padding:16px;">
+                <div style="font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--clr-primary);">340+</div>
+                <div style="font-size:0.78rem;color:var(--clr-text2);">AI Projects</div>
+              </div>
+              <div class="highlight-box" style="text-align:center;padding:16px;">
+                <div style="font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--clr-accent);">99.2%</div>
+                <div style="font-size:0.78rem;color:var(--clr-text2);">Avg Accuracy</div>
+              </div>
+              <div class="highlight-box" style="text-align:center;padding:16px;">
+                <div style="font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--clr-accent2);">60%</div>
+                <div style="font-size:0.78rem;color:var(--clr-text2);">Cost Reduction</div>
+              </div>
+              <div class="highlight-box" style="text-align:center;padding:16px;">
+                <div style="font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--clr-gold);">4.2x</div>
+                <div style="font-size:0.78rem;color:var(--clr-text2);">Avg ROI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Service 2 -->
+      <div class="grid-2" style="gap:60px;margin:80px 0;align-items:center;">
+        <div class="reveal-left order-2">
+          <div class="card" style="padding:40px;text-align:center;">
+            <div style="font-size:4rem;margin-bottom:20px;">☁️</div>
+            <div class="process-steps" style="margin-top:24px;text-align:left;">
+              <div class="process-step">
+                <div class="process-step-left"><div class="step-num">1</div><div class="step-line"></div></div>
+                <div class="step-content"><div class="step-title">Assessment</div><div class="step-desc">Current state analysis and cloud readiness evaluation.</div></div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-left"><div class="step-num">2</div><div class="step-line"></div></div>
+                <div class="step-content"><div class="step-title">Architecture Design</div><div class="step-desc">Blueprint for scalable, secure, cost-optimized cloud.</div></div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-left"><div class="step-num">3</div><div class="step-line"></div></div>
+                <div class="step-content"><div class="step-title">Migration & Deploy</div><div class="step-desc">Zero-downtime migration with automated pipelines.</div></div>
+              </div>
+              <div class="process-step">
+                <div class="process-step-left"><div class="step-num">4</div></div>
+                <div class="step-content"><div class="step-title">Optimize & Scale</div><div class="step-desc">Continuous monitoring, cost governance, and scaling.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="badge">Practice Area 02</div>
+          <h2 class="section-title"><span class="text-gradient">Cloud Architecture</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:24px;">Design, migrate, and optimize your cloud infrastructure across AWS, Azure, and GCP with our certified cloud architects and proven frameworks.</p>
+          <div class="service-features" style="margin-bottom:28px;">
+            <div class="service-feature">Multi-cloud and hybrid cloud strategy</div>
+            <div class="service-feature">Kubernetes and container orchestration</div>
+            <div class="service-feature">Infrastructure as Code (IaC)</div>
+            <div class="service-feature">FinOps and cloud cost management</div>
+            <div class="service-feature">Disaster recovery and business continuity</div>
+          </div>
+          <a href="contact.html" class="btn btn-ghost">Explore Cloud Services →</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- More Services Grid -->
+      <div class="text-center reveal" style="margin:80px 0 48px;">
+        <div class="section-tag">More Capabilities</div>
+        <h2 class="section-title">Additional <span class="text-gradient">Practice Areas</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="service-card reveal reveal-delay-1">
+          <div class="icon-box icon-gold">🔐</div>
+          <div class="service-card-title">Cybersecurity</div>
+          <div class="service-card-desc">Proactive security programs that protect your enterprise from evolving threats with zero-trust architecture and 24/7 monitoring.</div>
+          <div class="service-features">
+            <div class="service-feature">Penetration testing & red teaming</div>
+            <div class="service-feature">Zero-trust network architecture</div>
+            <div class="service-feature">SIEM & SOC services</div>
+            <div class="service-feature">Compliance (ISO 27001, SOC 2)</div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="icon-box icon-purple">📊</div>
+          <div class="service-card-title">Strategic Consulting</div>
+          <div class="service-card-desc">Data-driven strategy development, digital roadmapping, and executive advisory that aligns technology with business outcomes.</div>
+          <div class="service-features">
+            <div class="service-feature">Digital transformation strategy</div>
+            <div class="service-feature">Technology due diligence (M&A)</div>
+            <div class="service-feature">Organizational design</div>
+            <div class="service-feature">Executive coaching & workshops</div>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="icon-box icon-blue">🌐</div>
+          <div class="service-card-title">Digital Transformation</div>
+          <div class="service-card-desc">End-to-end business digitization including legacy modernization, process automation, and cultural change management.</div>
+          <div class="service-features">
+            <div class="service-feature">Legacy system modernization</div>
+            <div class="service-feature">RPA and intelligent automation</div>
+            <div class="service-feature">Customer experience (CX) design</div>
+            <div class="service-feature">Data mesh & platform architecture</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── PRICING ── -->
+  <section class="section-padding" style="background:var(--clr-bg2);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <div class="section-tag">Engagement Models</div>
+        <h2 class="section-title">Flexible <span class="text-gradient">Partnership Models</span></h2>
+        <p class="section-subtitle center">From project-based engagements to long-term strategic partnerships. We adapt to your needs.</p>
+      </div>
+      <div class="grid-3">
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="pricing-tier">Project</div>
+          <div class="pricing-price"><span class="text-gradient">Custom</span></div>
+          <div class="pricing-period">per project · scoped to your needs</div>
+          <div class="pricing-features">
+            <div class="pricing-feature">Fixed-scope delivery</div>
+            <div class="pricing-feature">Dedicated project team</div>
+            <div class="pricing-feature">Milestone-based billing</div>
+            <div class="pricing-feature">Knowledge transfer included</div>
+          </div>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Get a Quote</a>
+        </div>
+        <div class="pricing-card featured reveal reveal-delay-2">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Retainer</div>
+          <div class="pricing-price"><span class="text-gradient">$25K</span></div>
+          <div class="pricing-period">per month · 6-month minimum</div>
+          <div class="pricing-features">
+            <div class="pricing-feature">Dedicated team pod (4-8 experts)</div>
+            <div class="pricing-feature">Unlimited project scope</div>
+            <div class="pricing-feature">Weekly executive reporting</div>
+            <div class="pricing-feature">Priority support (4hr SLA)</div>
+            <div class="pricing-feature">Quarterly strategy reviews</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Start Partnership →</a>
+        </div>
+        <div class="pricing-card reveal reveal-delay-3">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price"><span class="text-gradient">Custom</span></div>
+          <div class="pricing-period">tailored enterprise agreement</div>
+          <div class="pricing-features">
+            <div class="pricing-feature">Embedded teams at client site</div>
+            <div class="pricing-feature">Global resource access</div>
+            <div class="pricing-feature">Executive sponsor assigned</div>
+            <div class="pricing-feature">24/7 dedicated support</div>
+            <div class="pricing-feature">Custom SLAs & governance</div>
+          </div>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS ── -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="grid-2" style="gap:80px;align-items:start;">
+        <div class="reveal-left">
+          <div class="section-tag">How We Work</div>
+          <h2 class="section-title">Our <span class="text-gradient">Proven Delivery Process</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:36px;font-size:0.95rem;">A structured, transparent, and iterative process that keeps you informed and in control at every stage.</p>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step-left"><div class="step-num">01</div><div class="step-line"></div></div>
+              <div class="step-content"><div class="step-title">Discovery & Assessment</div><div class="step-desc">We conduct a thorough analysis of your current state, goals, constraints, and competitive landscape to define the optimal path forward.</div></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-left"><div class="step-num">02</div><div class="step-line"></div></div>
+              <div class="step-content"><div class="step-title">Strategy & Roadmapping</div><div class="step-desc">Collaboratively design a prioritized roadmap with clear milestones, resource requirements, and ROI projections tied to business outcomes.</div></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-left"><div class="step-num">03</div><div class="step-line"></div></div>
+              <div class="step-content"><div class="step-title">Agile Execution</div><div class="step-desc">Sprint-based delivery with transparent communication, regular demos, and built-in flexibility to adapt as requirements evolve.</div></div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-left"><div class="step-num">04</div><div class="step-line"></div></div>
+              <div class="step-content"><div class="step-title">Launch & Optimize</div><div class="step-desc">Production deployment with full knowledge transfer, documentation, and ongoing optimization to maximize long-term value.</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="section-tag">Results We Deliver</div>
+          <h2 class="section-title">Measurable <span class="text-gradient">Business Impact</span></h2>
+          <p style="color:var(--clr-text2);line-height:1.8;margin-bottom:36px;font-size:0.95rem;">Our clients don't just get solutions — they get results that move the needle.</p>
+          <div class="stats-bar" style="grid-template-columns:1fr 1fr;margin-bottom:32px;">
+            <div class="stat-item"><div class="stat-number" data-target="60" data-suffix="%">60%</div><div class="stat-label">Faster Time to Market</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="35" data-suffix="%">35%</div><div class="stat-label">Cost Reduction</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="4.2" data-suffix="x">4.2x</div><div class="stat-label">Average ROI</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="98" data-suffix="%">98%</div><div class="stat-label">On-Time Delivery</div></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Nexus Corp's AI platform reduced our customer churn by 42% in six months. The ROI was visible from week three."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">JL</div>
+              <div><div class="author-name">Janet Lim</div><div class="author-role">CDO, CloudForge</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="container">
+    <div class="cta-section reveal">
+      <h2 class="cta-title">Ready to Get <span class="text-gradient">Started?</span></h2>
+      <p class="cta-sub">Tell us about your challenge and we'll design a solution tailored to your unique needs and goals.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Schedule a Discovery Call →</a>
+        <a href="about.html" class="btn btn-outline">About Nexus Corp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">⚡</div>Nexus<span style="color:var(--clr-primary);">Corp</span></div><p class="footer-brand-desc">Empowering enterprises to innovate, scale, and lead in the digital era.</p><div class="footer-socials"><a href="#" class="footer-social">in</a><a href="#" class="footer-social">𝕏</a><a href="#" class="footer-social">⌨</a><a href="#" class="footer-social">▶</a></div></div>
+        <div class="footer-col"><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="services.html">AI & Machine Learning</a></li><li><a href="services.html">Cloud Architecture</a></li><li><a href="services.html">Cybersecurity</a></li><li><a href="services.html">Digital Transformation</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:hello@nexuscorp.io">hello@nexuscorp.io</a></li><li><a href="tel:+18005556789">+1 800 555 6789</a></li><li><a href="#">350 Fifth Ave, New York</a></li></ul></div>
+      </div>
+    </div>
+    <div class="container"><div class="footer-bottom"><p>© 2024 Nexus Corp. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div></div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
