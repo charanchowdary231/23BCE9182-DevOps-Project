@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
         - name: corporate-website
-          image: corporate-website:latest
-          imagePullPolicy: Never
+          image: charan0409/corporate-website:latest
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 80
